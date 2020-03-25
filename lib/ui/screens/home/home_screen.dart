@@ -1,4 +1,6 @@
 import 'package:covid/constants/detail_content.dart';
+import 'package:covid/ui/screens/attachments/attachment_contents.dart';
+import 'package:covid/ui/screens/attachments/attachments_screen.dart';
 import 'package:covid/ui/screens/detail/detail_view.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
@@ -298,6 +300,91 @@ Widget _homeScreenBody(BuildContext context) {
                     context,
                     MaterialPageRoute(
                         builder: (BuildContext context) => DetailView( appBarTitle: 'O que pode estar aberto',contents: ContentDetails.estar_aberto, hasSearch: true,)))
+              },
+            ),
+          ),
+        ],
+      ),
+      Row(
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        children: <Widget>[
+          Card(
+            color: Colors.transparent,
+            elevation: 20,
+            child: InkWell(
+              child: Container(
+                height: 180,
+                width: MediaQuery.of(context).size.width * 0.45,
+                decoration: BoxDecoration(
+                  image: DecorationImage(
+                      image: AssetImage('assets/other_measures.png'), fit: BoxFit.cover),
+                  shape: BoxShape.rectangle,
+                  borderRadius: BorderRadius.circular(16),
+                  color: Colors.blue,
+                ),
+                child: Align(
+                  alignment: Alignment.bottomCenter,
+                  child: Container(
+                    height: 50,
+                    width: MediaQuery.of(context).size.width * 0.45,
+                    decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.only(
+                          bottomLeft: Radius.circular(16),
+                          bottomRight: Radius.circular(16)),
+                    ),
+                    child: Padding(
+                      padding: const EdgeInsets.all(10.0),
+                      child: Text('Outras medidas'),
+                    ),
+                  ),
+                ),
+              ),
+              onTap: () => {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (BuildContext context) => DetailView( appBarTitle: 'Outras medidas',contents: ContentDetails.outras_medidas, hasExpandedTile: true,)))
+              },
+            ),
+          ),
+          Card(
+            color: Colors.transparent,
+            elevation: 20,
+            child: InkWell(
+              child: Container(
+                height: 180,
+                width: MediaQuery.of(context).size.width * 0.45,
+                decoration: BoxDecoration(
+                  image: DecorationImage(
+                      image: AssetImage('assets/attachments.png'), fit: BoxFit.cover),
+                  shape: BoxShape.rectangle,
+                  borderRadius: BorderRadius.circular(16),
+                  color: Colors.blue,
+                ),
+                child: Align(
+                  alignment: Alignment.bottomCenter,
+                  child: Container(
+                    height: 50,
+                    width: MediaQuery.of(context).size.width * 0.45,
+                    decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.only(
+                          bottomLeft: Radius.circular(16),
+                          bottomRight: Radius.circular(16)),
+                    ),
+                    child: Padding(
+                      padding: const EdgeInsets.all(10.0),
+                      child: Text('Ficheiros Anexados', textAlign: TextAlign.center,),
+                    ),
+                  ),
+                ),
+              ),
+              onTap: () => {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (BuildContext context) => AttachmentContentsView('Ficheiros Anexados')))
               },
             ),
           ),

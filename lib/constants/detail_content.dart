@@ -164,7 +164,7 @@ class ContentDetails {
     'Serviços de alojamento estudantil'
   ])];
   static List<ContentData> procedimentos = [
-  ContentData(title: 'Podem circular na via pública:', data: [
+  ContentData(title: 'Incumprimento de confinamento obrigatório: ', data: [
   'Comete crime de desobediência',
   'Ordenar o suspeito a colocação do epi',
   'Restringir e algemar o suspeito',
@@ -178,6 +178,21 @@ class ContentDetails {
     ContentData(title: 'Cidadão geral: ', data: [
       'Recomendar o cidadão de regresso a casa de forma pedagógica',
       'Não cumpre, crime de desobediência',
+    ]),
+  ];
+
+  static List<ContentData> outras_medidas = [
+    ContentData(title: 'Inspeções de veículos', data: [
+      'Os veículos a motor e seus reboques, ligeiros ou pesados, que devessem ser apresentados à inspeção periódica no período que decorre desde 13 de março de 2020 até ao dia 30 de junho de 2020, veem o seu prazo prorrogado por cinco meses contados da data da matrícula. Artigo 2 Decreto-Lei n.º 10-C/2020'
+    ]),
+    ContentData(title: 'Aluguer de veículos', data: [
+      'É permitido o exercício da atividade de aluguer de veículos de mercadorias sem condutor (renta-cargo). (n.º6 Despacho n.º 3614-A/2020)'
+    ]),
+    ContentData(title: 'Máquinas de vending', data: [
+      'É permitido o funcionamento de máquinas de vending em empresas, estabelecimentos ou quaisquer instituições nos quais aquelas máquinas representem o único meio de acesso a produtos alimentares. (n.º1 Despacho n.º 3614-A/2020)'
+    ]),
+    ContentData(title: 'Vendedores itinerantes', data: [
+      'É permitido o exercício da atividade por vendedores itinerantes, para disponibilização de bens de primeira necessidade ou de outros bens considerados essenciais na presente conjuntura, nas localidades onde essa atividade seja necessária para garantir o acesso a bens essenciais pela população. (n.º3 Despacho n.º 3614-A/2020)'
     ]),
   ];
 }
