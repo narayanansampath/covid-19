@@ -184,7 +184,6 @@ class ImageLoader extends StatelessWidget {
               child: CircularProgressIndicator(),
             );
           }
-
           return Image(image: MemoryImage(snapshot.data.bytes));
         },
       );
