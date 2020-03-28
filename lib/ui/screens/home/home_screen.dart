@@ -1,4 +1,5 @@
 import 'package:covid/constants/detail_content.dart';
+import 'package:covid/ui/gallery/gallery_view.dart';
 import 'package:covid/ui/screens/attachments/attachment_contents.dart';
 import 'package:covid/ui/screens/detail/detail_view.dart';
 import 'package:flutter/material.dart';
@@ -38,6 +39,8 @@ class _HomeScreenState extends State<HomeScreen> {
 }
 
 Widget _homeScreenBody(BuildContext context) {
+  List<String> regras_basicas = ['assets/basicas_1.PNG','assets/basicas_2.PNG'];
+  List<String> medidas = ['assets/medida1.PNG','assets/medida2.PNG','assets/medidas3.PNG','assets/medidas4.PNG','assets/medidas5.PNG','assets/medidas6.PNG','assets/medidas7.PNG','assets/medidas8.PNG','assets/medidas9.PNG','assets/medidas10.PNG'];
   return SingleChildScrollView(
       child: Column(
     children: <Widget>[
@@ -70,14 +73,15 @@ Widget _homeScreenBody(BuildContext context) {
                 ),
                 child: Stack(
                   children: [
-                    Padding(
-                      padding: const EdgeInsets.only(top: 18.0),
-                      child: Image.asset("assets/virus.png",),
-                    ),
+                    ClipRRect(
+                        borderRadius: BorderRadius.circular(16.0),
+                        child: Image.asset(
+                          "assets/sintomas.png",
+                        )),
                     Align(
                       alignment: Alignment.bottomCenter,
                       child: Container(
-                        height: 50,
+                        height: 62,
                         width: MediaQuery.of(context).size.width * 0.45,
                         decoration: BoxDecoration(
                           color: Colors.white,
@@ -87,7 +91,7 @@ Widget _homeScreenBody(BuildContext context) {
                         ),
                         child: Padding(
                           padding: const EdgeInsets.all(10.0),
-                          child: Text('Sintomas do covid-19'),
+                          child: Text('Sintomas do covid-19',textAlign: TextAlign.center,),
                         ),
                       ),
                     ),
@@ -118,30 +122,90 @@ Widget _homeScreenBody(BuildContext context) {
                 ),
                 child: Stack(
                   children: [
-                    Padding(
-                      padding: const EdgeInsets.only(bottom: 40.0,left: 10, right: 10),
-                      child: Image.asset("assets/important.png"),
-                    ),
+                    ClipRRect(
+                        borderRadius: BorderRadius.circular(16.0),
+                        child: Image.asset(
+                          "assets/rules.png",
+                          width: MediaQuery.of(context).size.width * 0.45,
+                          fit: BoxFit.fitWidth,
+                        )),
                     Align(
-                    alignment: Alignment.bottomCenter,
-                    child: Container(
-                      height: 50,
-                      width: MediaQuery.of(context).size.width * 0.45,
-                      decoration: BoxDecoration(
-                        color: Colors.white,
-                        borderRadius: BorderRadius.only(
-                            bottomLeft: Radius.circular(16),
-                            bottomRight: Radius.circular(16)),
-                      ),
-                      child: Padding(
-                        padding: const EdgeInsets.all(8.0),
-                        child: Text(
-                          'Confinamento obrigatório',
-                          textAlign: TextAlign.center,
+                      alignment: Alignment.bottomCenter,
+                      child: Container(
+                        height: 62,
+                        width: MediaQuery.of(context).size.width * 0.45,
+                        decoration: BoxDecoration(
+                          color: Colors.white,
+                          borderRadius: BorderRadius.only(
+                              bottomLeft: Radius.circular(16),
+                              bottomRight: Radius.circular(16)),
+                        ),
+                        child: Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: Text(
+                            'Regras básicas',
+                            textAlign: TextAlign.center,
+                          ),
                         ),
                       ),
                     ),
-                  ),],
+                  ],
+                ),
+              ),
+              onTap: () => {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (BuildContext context) => GalleryView(
+                            appBarTitle: 'Regras básicas',
+                            images: regras_basicas)))
+              },
+            ),
+          ),
+        ],
+      ),
+      Row(
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        children: <Widget>[
+          Card(
+            color: Colors.transparent,
+            elevation: 20,
+            child: InkWell(
+              child: Container(
+                height: 180,
+                width: MediaQuery.of(context).size.width * 0.45,
+                decoration: BoxDecoration(
+                  shape: BoxShape.rectangle,
+                  borderRadius: BorderRadius.circular(16),
+                  color: Colors.white,
+                ),
+                child: Stack(
+                  children: [
+                    ClipRRect(
+                        borderRadius: BorderRadius.circular(16.0),
+                        child: Image.asset(
+                          "assets/suspect.png",
+                          width: MediaQuery.of(context).size.width * 0.45,
+                          fit: BoxFit.fitWidth,
+                        )),
+                    Align(
+                      alignment: Alignment.bottomCenter,
+                      child: Container(
+                        height: 72,
+                        width: MediaQuery.of(context).size.width * 0.45,
+                        decoration: BoxDecoration(
+                          color: Colors.white,
+                          borderRadius: BorderRadius.only(
+                              bottomLeft: Radius.circular(16),
+                              bottomRight: Radius.circular(16)),
+                        ),
+                        child: Padding(
+                          padding: const EdgeInsets.all(10.0),
+                          child: Text('Atuar perante um caso suspeito',textAlign: TextAlign.center,style: TextStyle(fontSize: 19),),
+                        ),
+                      ),
+                    ),
+                  ],
                 ),
               ),
               onTap: () => {
@@ -149,8 +213,65 @@ Widget _homeScreenBody(BuildContext context) {
                     context,
                     MaterialPageRoute(
                         builder: (BuildContext context) => DetailView(
-                            appBarTitle: 'Confinamento obrigatório',
-                            contents: ContentDetails.confinamento_obrigatorio)))
+                            appBarTitle: 'Atuar perante um caso suspeito',
+                            contents: ContentDetails.suspeito)))
+              },
+            ),
+          ),
+          Card(
+            color: Colors.transparent,
+            elevation: 20,
+            child: InkWell(
+              child: Container(
+                height: 180,
+                width: MediaQuery.of(context).size.width * 0.45,
+                decoration: BoxDecoration(
+                  shape: BoxShape.rectangle,
+                  borderRadius: BorderRadius.circular(16),
+                  color: Colors.white,
+                ),
+                child: Stack(
+                  children: [
+                    ClipRRect(
+                        borderRadius: BorderRadius.circular(16.0),
+                        child: Image.asset(
+                          "assets/prevention.png",
+                          height: 120,
+                          fit: BoxFit.fitHeight,
+                        )),
+                    Align(
+                      alignment: Alignment.bottomCenter,
+                      child: Container(
+                        height: 72,
+                        width: MediaQuery.of(context).size.width * 0.45,
+                        decoration: BoxDecoration(
+                          color: Colors.white,
+                          borderRadius: BorderRadius.only(
+                              bottomLeft: Radius.circular(16),
+                              bottomRight: Radius.circular(16)),
+                        ),
+                        child: Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: Text(
+                            'Medidas de prevenção do COVID-19',
+                            textAlign: TextAlign.center,
+                            style: TextStyle(
+                              fontSize: 17
+                            ),
+                          ),
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              onTap: () => {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (BuildContext context) => GalleryView(
+                            appBarTitle: 'Medidas de prevenção do COVID-19',
+                            images: medidas)))
               },
             ),
           ),
@@ -177,7 +298,7 @@ Widget _homeScreenBody(BuildContext context) {
                 child: Align(
                   alignment: Alignment.bottomCenter,
                   child: Container(
-                    height: 70,
+                    height: 80,
                     width: MediaQuery.of(context).size.width * 0.45,
                     decoration: BoxDecoration(
                       color: Colors.white,
@@ -188,7 +309,9 @@ Widget _homeScreenBody(BuildContext context) {
                     child: Padding(
                       padding: const EdgeInsets.all(10.0),
                       child: Text(
-                          'Maiores de 70 anos e Imunodeprimidos e doença crónica'),
+                          'Maiores de 70 anos e Imunodeprimidos e doença crónica',style: TextStyle(
+                        fontSize: 17
+                      ),),
                     ),
                   ),
                 ),
@@ -262,29 +385,39 @@ Widget _homeScreenBody(BuildContext context) {
                 height: 180,
                 width: MediaQuery.of(context).size.width * 0.45,
                 decoration: BoxDecoration(
-                  image: DecorationImage(
-                      image: AssetImage('assets/closed.png'),
-                      fit: BoxFit.cover),
                   shape: BoxShape.rectangle,
                   borderRadius: BorderRadius.circular(16),
-                  color: Colors.blue,
+                  color: Colors.white,
                 ),
-                child: Align(
-                  alignment: Alignment.bottomCenter,
-                  child: Container(
-                    height: 50,
-                    width: MediaQuery.of(context).size.width * 0.45,
-                    decoration: BoxDecoration(
-                      color: Colors.white,
-                      borderRadius: BorderRadius.only(
-                          bottomLeft: Radius.circular(16),
-                          bottomRight: Radius.circular(16)),
+                child: Stack(
+                  children: [
+                    Padding(
+                      padding: const EdgeInsets.only(bottom: 10.0),
+                      child: ClipRRect(
+                        borderRadius: BorderRadius.circular(16),
+                        child: Image.asset(
+                          "assets/closed.png",
+                        ),
+                      ),
                     ),
-                    child: Padding(
-                      padding: const EdgeInsets.all(10.0),
-                      child: Text('O que tem de encerrar'),
+                    Align(
+                      alignment: Alignment.bottomCenter,
+                      child: Container(
+                        height: 62,
+                        width: MediaQuery.of(context).size.width * 0.45,
+                        decoration: BoxDecoration(
+                          color: Colors.white,
+                          borderRadius: BorderRadius.only(
+                              bottomLeft: Radius.circular(16),
+                              bottomRight: Radius.circular(16)),
+                        ),
+                        child: Padding(
+                          padding: const EdgeInsets.all(10.0),
+                          child: Text('O que tem de encerrar',textAlign: TextAlign.center,),
+                        ),
+                      ),
                     ),
-                  ),
+                  ],
                 ),
               ),
               onTap: () => {
@@ -309,34 +442,40 @@ Widget _homeScreenBody(BuildContext context) {
                 decoration: BoxDecoration(
                   shape: BoxShape.rectangle,
                   borderRadius: BorderRadius.circular(16),
-                  color: Color(0xff201035),
+                  color: Colors.white,
                 ),
                 child: Stack(
                   children: [
                     Padding(
-                      padding: const EdgeInsets.only(bottom: 18.0,top: 20),
-                      child: Image.asset("assets/open.png",),
-                    ),
-                    Align(
-                    alignment: Alignment.bottomCenter,
-                    child: Container(
-                      height: 50,
-                      width: MediaQuery.of(context).size.width * 0.45,
-                      decoration: BoxDecoration(
-                        color: Colors.white,
-                        borderRadius: BorderRadius.only(
-                            bottomLeft: Radius.circular(16),
-                            bottomRight: Radius.circular(16)),
-                      ),
-                      child: Padding(
-                        padding: const EdgeInsets.all(10.0),
-                        child: Text(
-                          'O que pode estar aberto',
-                          textAlign: TextAlign.center,
+                      padding: const EdgeInsets.only(bottom: 18.0, ),
+                      child: ClipRRect(
+                        borderRadius: BorderRadius.circular(16),
+                        child: Image.asset(
+                          "assets/open.png",
                         ),
                       ),
                     ),
-                  ),],
+                    Align(
+                      alignment: Alignment.bottomCenter,
+                      child: Container(
+                        height: 62,
+                        width: MediaQuery.of(context).size.width * 0.45,
+                        decoration: BoxDecoration(
+                          color: Colors.white,
+                          borderRadius: BorderRadius.only(
+                              bottomLeft: Radius.circular(16),
+                              bottomRight: Radius.circular(16)),
+                        ),
+                        child: Padding(
+                          padding: const EdgeInsets.all(10.0),
+                          child: Text(
+                            'O que pode estar aberto',
+                            textAlign: TextAlign.center,
+                          ),
+                        ),
+                      ),
+                    ),
+                  ],
                 ),
               ),
               onTap: () => {
@@ -419,7 +558,7 @@ Widget _homeScreenBody(BuildContext context) {
                 child: Align(
                   alignment: Alignment.bottomCenter,
                   child: Container(
-                    height: 50,
+                    height: 62,
                     width: MediaQuery.of(context).size.width * 0.45,
                     decoration: BoxDecoration(
                       color: Colors.white,
@@ -467,25 +606,28 @@ Widget _homeScreenBody(BuildContext context) {
                   children: [
                     Padding(
                       padding: const EdgeInsets.only(top: 30),
-                      child: Image.asset("assets/dre.png",),
+                      child: Image.asset(
+                        "assets/dre.png",
+                      ),
                     ),
                     Align(
-                    alignment: Alignment.bottomCenter,
-                    child: Container(
-                      height: 50,
-                      width: MediaQuery.of(context).size.width * 0.45,
-                      decoration: BoxDecoration(
-                        color: Colors.white,
-                        borderRadius: BorderRadius.only(
-                            bottomLeft: Radius.circular(16),
-                            bottomRight: Radius.circular(16)),
-                      ),
-                      child: Padding(
-                        padding: const EdgeInsets.all(10.0),
-                        child: Text('Cronologia da legislação'),
+                      alignment: Alignment.bottomCenter,
+                      child: Container(
+                        height: 62,
+                        width: MediaQuery.of(context).size.width * 0.45,
+                        decoration: BoxDecoration(
+                          color: Colors.white,
+                          borderRadius: BorderRadius.only(
+                              bottomLeft: Radius.circular(16),
+                              bottomRight: Radius.circular(16)),
+                        ),
+                        child: Padding(
+                          padding: const EdgeInsets.all(10.0),
+                          child: Text('Cronologia da legislação',textAlign: TextAlign.center,),
+                        ),
                       ),
                     ),
-                  ),],
+                  ],
                 ),
               ),
               onTap: () => {
@@ -511,7 +653,7 @@ Widget _homeScreenBody(BuildContext context) {
                 child: Align(
                   alignment: Alignment.bottomCenter,
                   child: Container(
-                    height: 50,
+                    height: 62,
                     width: MediaQuery.of(context).size.width * 0.45,
                     decoration: BoxDecoration(
                       color: Colors.white,
@@ -553,28 +695,31 @@ Widget _homeScreenBody(BuildContext context) {
                   children: [
                     Padding(
                       padding: const EdgeInsets.only(top: 30),
-                      child: Image.asset("assets/dgs.png",),
+                      child: Image.asset(
+                        "assets/dgs.png",
+                      ),
                     ),
                     Align(
-                    alignment: Alignment.bottomCenter,
-                    child: Container(
-                      height: 50,
-                      width: MediaQuery.of(context).size.width * 0.45,
-                      decoration: BoxDecoration(
-                        color: Colors.white,
-                        borderRadius: BorderRadius.only(
-                            bottomLeft: Radius.circular(16),
-                            bottomRight: Radius.circular(16)),
-                      ),
-                      child: Padding(
-                        padding: const EdgeInsets.all(10.0),
-                        child: Text(
-                          'covid-19 em Portugal',
-                          textAlign: TextAlign.center,
+                      alignment: Alignment.bottomCenter,
+                      child: Container(
+                        height: 67,
+                        width: MediaQuery.of(context).size.width * 0.45,
+                        decoration: BoxDecoration(
+                          color: Colors.white,
+                          borderRadius: BorderRadius.only(
+                              bottomLeft: Radius.circular(16),
+                              bottomRight: Radius.circular(16)),
+                        ),
+                        child: Padding(
+                          padding: const EdgeInsets.all(10.0),
+                          child: Text(
+                            'covid-19 em Portugal',
+                            textAlign: TextAlign.center,
+                          ),
                         ),
                       ),
                     ),
-                  ),],
+                  ],
                 ),
               ),
               onTap: () => {
@@ -629,6 +774,66 @@ Widget _homeScreenBody(BuildContext context) {
                               hasExpandedTile: true,
                             )))
               },
+            ),
+          ),
+        ],
+      ),
+      Row(
+        mainAxisAlignment: MainAxisAlignment.start,
+        children: <Widget>[
+          Padding(
+            padding: const EdgeInsets.only(left:8.0),
+            child: Card(
+              color: Colors.transparent,
+              elevation: 20,
+              child: InkWell(
+                child: Container(
+                  height: 180,
+                  width: MediaQuery.of(context).size.width * 0.45,
+                  decoration: BoxDecoration(
+                    shape: BoxShape.rectangle,
+                    borderRadius: BorderRadius.circular(16),
+                    color: Colors.white,
+                  ),
+                  child: Stack(
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.only(
+                            bottom: 40.0, left: 10, right: 10),
+                        child: Image.asset("assets/important.png"),
+                      ),
+                      Align(
+                        alignment: Alignment.bottomCenter,
+                        child: Container(
+                          height: 62,
+                          width: MediaQuery.of(context).size.width * 0.45,
+                          decoration: BoxDecoration(
+                            color: Colors.white,
+                            borderRadius: BorderRadius.only(
+                                bottomLeft: Radius.circular(16),
+                                bottomRight: Radius.circular(16)),
+                          ),
+                          child: Padding(
+                            padding: const EdgeInsets.all(8.0),
+                            child: Text(
+                              'Confinamento obrigatório',
+                              textAlign: TextAlign.center,
+                            ),
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                onTap: () => {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (BuildContext context) => DetailView(
+                              appBarTitle: 'Confinamento obrigatório',
+                              contents: ContentDetails.confinamento_obrigatorio)))
+                },
+              ),
             ),
           ),
         ],

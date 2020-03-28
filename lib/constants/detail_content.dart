@@ -194,5 +194,35 @@ class ContentDetails {
     ContentData(title: 'Vendedores itinerantes', data: [
       'É permitido o exercício da atividade por vendedores itinerantes, para disponibilização de bens de primeira necessidade ou de outros bens considerados essenciais na presente conjuntura, nas localidades onde essa atividade seja necessária para garantir o acesso a bens essenciais pela população. (n.º3 Despacho n.º 3614-A/2020)'
     ]),
+    ContentData(title: 'Restauração', data: [
+      'Os estabelecimentos de restauração e similares podem manter a respetiva atividade, se os seus titulares assim o decidirem, para efeitos exclusivos de confeção destinada a consumo fora do estabelecimento ou entrega no domicílio, diretamente ou através de intermediário. (N.o2 artigo 9 Decreto n.o 2-A/2020).'
+    ]),
+    ContentData(title: 'Eventos de cariz religioso e culto', data: [
+      'Fica proibida a realização de celebrações de cariz religioso e de outros eventos de culto que impliquem uma aglomeração de pessoas.(No2 artigo 17 Decreto n.o 2-A/2020).'
+    ]),
+    ContentData(title: 'Funerais', data: [
+      'A realização de funerais está condicionada à adoção de medidas organizacionais que garantam a inexistência de aglomerados de pessoas e o controlo das distâncias de segurança, designadamente a fixação de um limite máximo de presenças, a determinar pela autarquia local que exerça os poderes de gestão do respetivo cemitério. (n.o2 artigo 17 Decreto n.o 2-A/2020).'
+    ])
+  ];
+
+  static List<ContentData> suspeito = [
+    ContentData(title: 'caso suspeito, uma pessoa com:', data: [
+  'Presença de sintomas (febre ou tosse ou dificuldade respiratória)',
+  'Deve:',
+  'Dirigir-se para área de isolamento',
+  'Informar a pessoa responsável pela entidade',
+  'Ir para a sala de isolamento',
+  'Colocar a máscara',
+  'Contactar a linha SNS24 (808242424) e seguir as suas orientações',
+  'Após a decisão sobre o caso',
+  'Limpeza e desinfeção da área de isolamento',
+  'Reposição do material utilizado',
+    ]),
+    ContentData(title: 'Contacto com caso confirmado', data: [
+      'Isolamento profilático e vigilância ativa de sintomas (febre ou tosse o dificuldade de respirar)',
+      'Se aparecer estes sintomas',
+      'Ligar imediatamente a linha',
+      'SNS24 (808242424)',
+    ])
   ];
 }

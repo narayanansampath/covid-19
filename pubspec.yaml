@@ -27,6 +27,7 @@ dependencies:
   url_launcher: ^5.0.5
   native_pdf_renderer: ^1.8.1
   flutter_advanced_networkimage: ^0.7.0
+  flutter_swiper: ^1.1.6
 
 dev_dependencies:
   flutter_test:
@@ -54,7 +55,7 @@ flutter:
     - assets/corona.jpeg
     - assets/GNR.jpeg
     - assets/grandparents.png
-    - assets/virus.png
+    - assets/sintomas.png
     - assets/checklist.jpg
     - assets/closed.png
     - assets/open.png
@@ -68,6 +69,21 @@ flutter:
     - assets/dre.png
     - assets/world.png
     - assets/dgs.png
+    - assets/prevention.png
+    - assets/suspect.png
+    - assets/rules.png
+    - assets/medida1.PNG
+    - assets/medida2.PNG
+    - assets/medidas3.PNG
+    - assets/medidas4.PNG
+    - assets/medidas5.PNG
+    - assets/medidas6.PNG
+    - assets/medidas7.PNG
+    - assets/medidas8.PNG
+    - assets/medidas9.PNG
+    - assets/medidas10.PNG
+    - assets/basicas_1.PNG
+    - assets/basicas_2.PNG
   # To add assets to your application, add an assets section, like this:
   # assets:
   #  - images/a_dot_burr.jpeg

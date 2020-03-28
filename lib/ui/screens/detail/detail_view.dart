@@ -108,7 +108,7 @@ class _DetailViewState extends State<DetailView> {
                                             fontSize: 18,
                                             color: Colors.black87,
                                           ),
-                                          textAlign: TextAlign.center,
+                                          textAlign: TextAlign.start,
                                         ),
                                       ),
                                     ))
@@ -150,14 +150,14 @@ class _DetailViewState extends State<DetailView> {
                                 ? searchContents
                                     .map((content) => Flexible(
                                           child: Padding(
-                                            padding: const EdgeInsets.all(15.0),
+                                            padding: const EdgeInsets.only(left: 15.0, right: 15.0, bottom: 5,top: 5),
                                             child: Text(
                                               content,
                                               style: TextStyle(
                                                 fontSize: 18,
                                                 color: Colors.black87,
                                               ),
-                                              textAlign: TextAlign.justify,
+                                              textAlign: TextAlign.start,
                                             ),
                                           ),
                                         ))
@@ -165,14 +165,14 @@ class _DetailViewState extends State<DetailView> {
                                 : widget.contents[index].data
                                     .map((content) => Flexible(
                                           child: Padding(
-                                            padding: const EdgeInsets.all(15.0),
+                                            padding: const EdgeInsets.only(left: 15.0, right: 15.0, bottom: 5,top: 5),
                                             child: Text(
                                               content,
                                               style: TextStyle(
                                                 fontSize: 18,
                                                 color: Colors.black87,
                                               ),
-                                              textAlign: TextAlign.justify,
+                                              textAlign: TextAlign.start,
                                             ),
                                           ),
                                         ))
