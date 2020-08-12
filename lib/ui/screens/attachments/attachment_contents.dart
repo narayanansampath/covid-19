@@ -38,22 +38,6 @@ class AttachmentContentsView extends StatelessWidget {
             ),
           ),
         ),
-        Padding(
-          padding: const EdgeInsets.all(10.0),
-          child: Card(
-            elevation: 20,
-            child: ListTile(
-              title: Text('Fluxograma_Procedimentos CTER Braga'),
-              trailing: Icon(Icons.arrow_forward_ios),
-              onTap: () => {
-                Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                        builder: (BuildContext context) => AttachmentView('Ficheiros Anexados', pages: 1, fileName: 'CTER_Braga.pdf',)))
-              },
-            ),
-          ),
-        )
       ],
     );
   }

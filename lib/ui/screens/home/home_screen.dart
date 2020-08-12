@@ -49,7 +49,7 @@ Widget _homeScreenBody(BuildContext context) {
           Container(
               height: 100,
               width: MediaQuery.of(context).size.width / 2,
-              child: Image.asset('assets/GNR.jpeg')),
+              child: Image.asset('assets/fique.jpeg')),
           Container(
               height: 100,
               width: MediaQuery.of(context).size.width / 2,
@@ -91,7 +91,7 @@ Widget _homeScreenBody(BuildContext context) {
                         ),
                         child: Padding(
                           padding: const EdgeInsets.all(10.0),
-                          child: Text('Sintomas do covid-19',textAlign: TextAlign.center,),
+                          child: Text('Sintomas do covid-19'.toUpperCase(),textAlign: TextAlign.center,),
                         ),
                       ),
                     ),
@@ -143,7 +143,7 @@ Widget _homeScreenBody(BuildContext context) {
                         child: Padding(
                           padding: const EdgeInsets.all(8.0),
                           child: Text(
-                            'Regras básicas',
+                            'Regras básicas'.toUpperCase(),
                             textAlign: TextAlign.center,
                           ),
                         ),
@@ -191,7 +191,7 @@ Widget _homeScreenBody(BuildContext context) {
                     Align(
                       alignment: Alignment.bottomCenter,
                       child: Container(
-                        height: 72,
+                        height: 90,
                         width: MediaQuery.of(context).size.width * 0.45,
                         decoration: BoxDecoration(
                           color: Colors.white,
@@ -201,7 +201,7 @@ Widget _homeScreenBody(BuildContext context) {
                         ),
                         child: Padding(
                           padding: const EdgeInsets.all(10.0),
-                          child: Text('Atuar perante um caso suspeito',textAlign: TextAlign.center,style: TextStyle(fontSize: 19),),
+                          child: Text('Atuar perante um caso suspeito'.toUpperCase(),textAlign: TextAlign.center,style: TextStyle(fontSize: 19),),
                         ),
                       ),
                     ),
@@ -242,7 +242,7 @@ Widget _homeScreenBody(BuildContext context) {
                     Align(
                       alignment: Alignment.bottomCenter,
                       child: Container(
-                        height: 72,
+                        height: 85,
                         width: MediaQuery.of(context).size.width * 0.45,
                         decoration: BoxDecoration(
                           color: Colors.white,
@@ -253,7 +253,7 @@ Widget _homeScreenBody(BuildContext context) {
                         child: Padding(
                           padding: const EdgeInsets.all(8.0),
                           child: Text(
-                            'Medidas de prevenção do COVID-19',
+                            'Medidas de prevenção do COVID-19'.toUpperCase(),
                             textAlign: TextAlign.center,
                             style: TextStyle(
                               fontSize: 17
@@ -298,7 +298,7 @@ Widget _homeScreenBody(BuildContext context) {
                 child: Align(
                   alignment: Alignment.bottomCenter,
                   child: Container(
-                    height: 80,
+                    height: 120,
                     width: MediaQuery.of(context).size.width * 0.45,
                     decoration: BoxDecoration(
                       color: Colors.white,
@@ -309,9 +309,10 @@ Widget _homeScreenBody(BuildContext context) {
                     child: Padding(
                       padding: const EdgeInsets.all(10.0),
                       child: Text(
-                          'Maiores de 70 anos e Imunodeprimidos e doença crónica',style: TextStyle(
+                          'Maiores de 70 anos e Imunodeprimidos e doença crónica'.toUpperCase(),style: TextStyle(
                         fontSize: 17
-                      ),),
+                      ),
+                      textAlign: TextAlign.center,),
                     ),
                   ),
                 ),
@@ -344,7 +345,7 @@ Widget _homeScreenBody(BuildContext context) {
                 child: Align(
                   alignment: Alignment.bottomCenter,
                   child: Container(
-                    height: 50,
+                    height: 70,
                     width: MediaQuery.of(context).size.width * 0.45,
                     decoration: BoxDecoration(
                       color: Colors.white,
@@ -355,7 +356,7 @@ Widget _homeScreenBody(BuildContext context) {
                     child: Padding(
                       padding: const EdgeInsets.all(10.0),
                       child: Text(
-                        'Cidadão geral',
+                        'Cidadão geral'.toUpperCase(),
                         textAlign: TextAlign.center,
                       ),
                     ),
@@ -403,7 +404,7 @@ Widget _homeScreenBody(BuildContext context) {
                     Align(
                       alignment: Alignment.bottomCenter,
                       child: Container(
-                        height: 62,
+                        height: 72,
                         width: MediaQuery.of(context).size.width * 0.45,
                         decoration: BoxDecoration(
                           color: Colors.white,
@@ -413,7 +414,7 @@ Widget _homeScreenBody(BuildContext context) {
                         ),
                         child: Padding(
                           padding: const EdgeInsets.all(10.0),
-                          child: Text('O que tem de encerrar',textAlign: TextAlign.center,),
+                          child: Text('O que tem de encerrar'.toUpperCase(),textAlign: TextAlign.center,),
                         ),
                       ),
                     ),
@@ -458,7 +459,7 @@ Widget _homeScreenBody(BuildContext context) {
                     Align(
                       alignment: Alignment.bottomCenter,
                       child: Container(
-                        height: 62,
+                        height: 72,
                         width: MediaQuery.of(context).size.width * 0.45,
                         decoration: BoxDecoration(
                           color: Colors.white,
@@ -469,7 +470,7 @@ Widget _homeScreenBody(BuildContext context) {
                         child: Padding(
                           padding: const EdgeInsets.all(10.0),
                           child: Text(
-                            'O que pode estar aberto',
+                            'O que pode estar aberto'.toUpperCase(),
                             textAlign: TextAlign.center,
                           ),
                         ),
@@ -513,7 +514,7 @@ Widget _homeScreenBody(BuildContext context) {
                 child: Align(
                   alignment: Alignment.bottomCenter,
                   child: Container(
-                    height: 50,
+                    height: 70,
                     width: MediaQuery.of(context).size.width * 0.45,
                     decoration: BoxDecoration(
                       color: Colors.white,
@@ -523,7 +524,9 @@ Widget _homeScreenBody(BuildContext context) {
                     ),
                     child: Padding(
                       padding: const EdgeInsets.all(10.0),
-                      child: Text('Outras medidas'),
+                      child: Text('Outras medidas'.toUpperCase(),
+                        textAlign: TextAlign.center,
+                      ),
                     ),
                   ),
                 ),
@@ -558,7 +561,7 @@ Widget _homeScreenBody(BuildContext context) {
                 child: Align(
                   alignment: Alignment.bottomCenter,
                   child: Container(
-                    height: 62,
+                    height: 72,
                     width: MediaQuery.of(context).size.width * 0.45,
                     decoration: BoxDecoration(
                       color: Colors.white,
@@ -569,7 +572,7 @@ Widget _homeScreenBody(BuildContext context) {
                     child: Padding(
                       padding: const EdgeInsets.all(10.0),
                       child: Text(
-                        'Ficheiros Anexados',
+                        'Ficheiros Anexados'.toUpperCase(),
                         textAlign: TextAlign.center,
                       ),
                     ),
@@ -613,7 +616,7 @@ Widget _homeScreenBody(BuildContext context) {
                     Align(
                       alignment: Alignment.bottomCenter,
                       child: Container(
-                        height: 62,
+                        height: 90,
                         width: MediaQuery.of(context).size.width * 0.45,
                         decoration: BoxDecoration(
                           color: Colors.white,
@@ -623,7 +626,7 @@ Widget _homeScreenBody(BuildContext context) {
                         ),
                         child: Padding(
                           padding: const EdgeInsets.all(10.0),
-                          child: Text('Cronologia da legislação',textAlign: TextAlign.center,),
+                          child: Text('Cronologia da legislação'.toUpperCase(),textAlign: TextAlign.center,),
                         ),
                       ),
                     ),
@@ -653,7 +656,7 @@ Widget _homeScreenBody(BuildContext context) {
                 child: Align(
                   alignment: Alignment.bottomCenter,
                   child: Container(
-                    height: 62,
+                    height: 72,
                     width: MediaQuery.of(context).size.width * 0.45,
                     decoration: BoxDecoration(
                       color: Colors.white,
@@ -664,7 +667,7 @@ Widget _homeScreenBody(BuildContext context) {
                     child: Padding(
                       padding: const EdgeInsets.all(10.0),
                       child: Text(
-                        'Covid-19 no mundo',
+                        'Covid-19 no mundo'.toUpperCase(),
                         textAlign: TextAlign.center,
                       ),
                     ),
@@ -713,7 +716,7 @@ Widget _homeScreenBody(BuildContext context) {
                         child: Padding(
                           padding: const EdgeInsets.all(10.0),
                           child: Text(
-                            'covid-19 em Portugal',
+                            'covid-19 em Portugal'.toUpperCase(),
                             textAlign: TextAlign.center,
                           ),
                         ),
@@ -746,7 +749,7 @@ Widget _homeScreenBody(BuildContext context) {
                 child: Align(
                   alignment: Alignment.bottomCenter,
                   child: Container(
-                    height: 50,
+                    height: 70,
                     width: MediaQuery.of(context).size.width * 0.45,
                     decoration: BoxDecoration(
                       color: Colors.white,
@@ -757,7 +760,7 @@ Widget _homeScreenBody(BuildContext context) {
                     child: Padding(
                       padding: const EdgeInsets.all(10.0),
                       child: Text(
-                        'Procedimentos',
+                        'Procedimentos'.toUpperCase(),
                         textAlign: TextAlign.center,
                       ),
                     ),
@@ -816,7 +819,7 @@ Widget _homeScreenBody(BuildContext context) {
                           child: Padding(
                             padding: const EdgeInsets.all(8.0),
                             child: Text(
-                              'Confinamento obrigatório',
+                              'Confinamento obrigatório'.toUpperCase(),
                               textAlign: TextAlign.center,
                             ),
                           ),

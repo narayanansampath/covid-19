@@ -34,10 +34,11 @@ dev_dependencies:
     sdk: flutter
   flutter_launcher_icons: "^0.7.4"
 
+#flutter pub run flutter_launcher_icons:main
 flutter_icons:
   android: true
   ios: true
-  image_path: "assets/app_logo.jpg"
+  image_path: "assets/sintomas.png"
 
 
 # For information on the generic Dart part of this file, see the
@@ -52,38 +53,7 @@ flutter:
   uses-material-design: true
 
   assets:
-    - assets/corona.jpeg
-    - assets/GNR.jpeg
-    - assets/grandparents.png
-    - assets/sintomas.png
-    - assets/checklist.jpg
-    - assets/closed.png
-    - assets/open.png
-    - assets/important.png
-    - assets/citizen.png
-    - assets/app_logo.jpg
-    - assets/other_measures.png
-    - assets/attachments.png
-    - assets/atos_legais.pdf
-    - assets/CTER_Braga.pdf
-    - assets/dre.png
-    - assets/world.png
-    - assets/dgs.png
-    - assets/prevention.png
-    - assets/suspect.png
-    - assets/rules.png
-    - assets/medida1.PNG
-    - assets/medida2.PNG
-    - assets/medidas3.PNG
-    - assets/medidas4.PNG
-    - assets/medidas5.PNG
-    - assets/medidas6.PNG
-    - assets/medidas7.PNG
-    - assets/medidas8.PNG
-    - assets/medidas9.PNG
-    - assets/medidas10.PNG
-    - assets/basicas_1.PNG
-    - assets/basicas_2.PNG
+    - assets/
   # To add assets to your application, add an assets section, like this:
   # assets:
   #  - images/a_dot_burr.jpeg

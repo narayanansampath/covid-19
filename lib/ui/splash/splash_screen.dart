@@ -24,7 +24,7 @@ class _SplashScreenState extends State<SplashScreenWidget> {
           child: Container(
             height: 250,
             width: 250,
-            child: Image.asset('assets/GNR.jpeg'),
+            child: Image.asset('assets/fique_splash.jpeg'),
           ),
         ),
       ],

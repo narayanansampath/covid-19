@@ -12,7 +12,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         textTheme: TextTheme(
-          body1: TextStyle(fontSize: 20.0, fontFamily: 'Hind',color: Colors.black),
+          body1: TextStyle(fontSize: 20.0, fontFamily: 'Hind',color: Colors.black, fontWeight: FontWeight.bold, ),
         ),
       ),
       home: SplashScreenWidget(),
